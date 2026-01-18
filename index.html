@@ -1,362 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Aditya Ramesh</div>
-      <div>
-        <ul class="nav-links">
-          <!-- <li><a href="#about">About</a></li> -->
-          <!-- <li><a href="#experience">Experience</a></li> -->
-          <!-- <li><a href="#projects">Projects</a></li> -->
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Aditya Ramesh</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Ramesh | Backend & Data Specialist</title>
+    <meta name="description" content="Portfolio of Aditya Ramesh - Backend and Data Engineering Specialist.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="./assets/aditya-profile-pic.jpeg" alt="Aditya Ramesh" class="profile-pic">
+            <h1>Hi, I'm Aditya.</h1>
+            <p class="tagline">A student at UIUC studying Statistics & Computer Science, specializing in <strong>Backend</strong> and <strong>Data Engineering</strong>.</p>
+            <nav class="hero-links">
+                <a href="https://github.com/adityaramesh15" target="_blank" class="btn">GitHub</a>
+                <a href="https://linkedin.com/in/adityaramesh15" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="./assets/Aditya Ramesh Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+            </nav>
         </div>
-        <div class="menu-links">
-          <!-- <li><a href="#about" onclick="toggleMenu()">About</a></li> -->
-          <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
-          <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="arrow-down"></div>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/aditya-profile-pic.jpeg"
-          alt="Aditya Ramesh profile picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello I'm</p>
-        <h1 class="title">Aditya Ramesh</h1>
-        <p class="section__text__p2">Student Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/aditya-resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button
-            class="btn btn-color-1"
-            onclick="location.href = './#contact'"
-          >
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn Profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/adityaramesh15'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github Profile"
-            class="icon"
-            onclick="location.href='https://www.github.com/adityaramesh15'"
-          />
-        </div>
-      </div>
     </section>
-    <!-- <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/aditya-about-pic.JPG"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+    <!-- split-layout Section (Experience & Projects) -->
+    <div class="split-layout container">
+        
+        <!-- Experience Column -->
+        <section id="experience" class="column">
+            <h2>Experience</h2>
+            <div class="list-group">
+                
+                <article class="card">
+                    <div class="card-header">
+                        <h3>Synchrony Financial</h3>
+                        <span class="role">Incoming Data Engineering Intern</span>
+                        <span class="date">Jan 2026 – May 2026</span>
+                    </div>
+                    <p class="card-description">Incoming Data Engineer for the Cloud Data Platform team, focusing on scalable cloud architectures.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h3>Motorola Solutions</h3>
+                        <span class="role">Software Engineering Intern</span>
+                        <span class="date">Feb 2025 – Dec 2025</span>
+                    </div>
+                    <p class="card-description">Built low-bitrate AI Vocoders and reduced testing runtime by 90% via automated Bash scripts. Optimized PyTorch Mobile models for embedded Android systems.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h3>FOCAL Lab at UIUC</h3>
+                        <span class="role">AI Undergraduate Researcher</span>
+                        <span class="date">Aug 2024 – Dec 2024</span>
+                    </div>
+                    <p class="card-description">Extended the QuaCer-B framework to detect LLM biases using LlamaGuard. Engineered 1,600+ prompts to test safety limits of Hugging Face models.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h3>ATLAS at UIUC</h3>
+                        <span class="role">Machine Learning Intern</span>
+                        <span class="date">May 2024 – Dec 2024</span>
+                    </div>
+                    <p class="card-description">Deployed a YOLOv9 computer vision model to classify waste with 87% accuracy, processing over 17,000 images.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h3>Discovery Partners Institute</h3>
+                        <span class="role">Course Instructor</span>
+                        <span class="date">May 2024 – Jul 2024</span>
+                    </div>
+                    <p class="card-description">Taught Object-Oriented Programming in Java/Kotlin to 130 students, achieving a 35% increase in student skill progression.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Projects Column -->
+        <section id="projects" class="column">
+            <h2>Projects</h2>
+            <div class="list-group">
+                
+                <a href="https://github.com/adityaramesh15/spotify-visualization-platform" target="_blank" class="card project-card">
+                    <div class="card-header">
+                        <h3>Spotify 3D Visualizer</h3>
+                        <span class="date">Dec 2024</span>
+                    </div>
+                    <p class="card-description">Architected a 3D music visualizer using Flask and SQLite, featuring secure OAuth2 authentication and Three.js integration.</p>
+                    <span class="link-hint">View Code &rarr;</span>
+                </a>
+
+                <a href="https://github.com/adityaramesh15/enhanced-llm-retrieval" target="_blank" class="card project-card">
+                    <div class="card-header">
+                        <h3>LLM Enhancement Tool</h3>
+                        <span class="date">Aug 2024</span>
+                    </div>
+                    <p class="card-description">Engineered a local RAG tool using LangChain and Pinecone to query Confluence data. Hosted Llama 3.1 locally with Redis caching.</p>
+                    <span class="link-hint">View Code &rarr;</span>
+                </a>
+
+                <a href="https://github.com/adityaramesh15/packet-anomaly-detection" target="_blank" class="card project-card">
+                    <div class="card-header">
+                        <h3>Packet Anomaly Detector</h3>
+                        <span class="date">Jul 2024</span>
+                    </div>
+                    <p class="card-description">Developed a high-speed C++ packet sniffer (0.05ms capture) integrated with a Redis-backed Isolation Forest model for anomaly detection.</p>
+                    <span class="link-hint">View Code &rarr;</span>
+                </a>
+
+                <a href="https://github.com/adityaramesh15/stock-predictor" target="_blank" class="card project-card">
+                    <div class="card-header">
+                        <h3>Stock Prediction Platform</h3>
+                        <span class="date">Nov 2023</span>
+                    </div>
+                    <p class="card-description">Built an LSTM-RNN stock prediction model achieving 81% accuracy. Processed 8 years of financial data using Pandas and the Alpaca API.</p>
+                    <span class="link-hint">View Code &rarr;</span>
+                </a>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Aditya Ramesh</p>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>UIUC Machine Learning Intern </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                B.S. Statistics & Computer Science<br />University of Illinois
-                Urbana-Champaign
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Hi, I'm Aditya!
-              <br /><br />
-              I'm a Student at UIUC interested in Software Development, Data Science, Machine
-              Learning, and Artificial Intelligience. My hobbies include F1 Racing,
-              sports, and video games. Take a look at my projects on Github and feel free
-              to reach out!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section> -->
-    <!-- <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C/C++</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML/CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>R</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Libraries</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Numpy</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Pandas</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TensorFlow</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Seaborn</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ToDoList.png"
-                alt="To Do List"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">To Do List</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/adityaramesh15/MyToDoApp'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://todolistaditya.azurewebsites.net'"
-              >
-                Website
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Stock.png"
-                alt="Stock Prediction"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Stock Prediction</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/adityaramesh15/stock-predictor'"
-              >
-                Github
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/adityaramesh15/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section> -->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="#" id="email-link">me [at] adityaramesh [dot] net</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/adityaramesh15">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <!-- <li><a href="#about">About</a></li> -->
-            <!-- <li><a href="#experience">Experience</a></li> -->
-            <!-- <li><a href="#projects">Projects</a></li> -->
-            <!-- <li><a href="#contact">Contact</a></li> -->
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2026 Aditya Ramesh. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
-  </body>
+
+</body>
 </html>
